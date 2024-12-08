@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-margin">
+    <form #f="ngForm">
+      <ion-label>Login</ion-label>
+      <ion-input ngModel name="email"></ion-input>
+      <ion-label>Password</ion-label>
+      <ion-input ngModel name="password"></ion-input>
+
+      <ion-button (click)="login(f.value)" color="danger"
+        >Se Connecter</ion-button
+      >
+      <ion-button color="primary" (click)="register(f.value)"
+        >S'inscrire</ion-button
+      >
+    </form>
+  </div>
+</ion-content>
